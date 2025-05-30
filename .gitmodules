@@ -1,4 +1,4 @@
 [submodule "fdaPDE/core"]
 	path = fdaPDE/core
-	url = https://github.com/fdaPDE/fdaPDE-core
-	branch = stable
+	url = git@github.com:MaxRiz00/fdaPDE-core.git
+	branch = develop
