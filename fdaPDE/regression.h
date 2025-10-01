@@ -23,10 +23,11 @@
 #include <fdaPDE/core.h>
 
 #include "src/indexes.h"
-#include "solvers.h"
+//#include "solvers.h"
 #include "src/models/sr.h"
 #include "src/models/gsr.h"
 #include "src/models/qsr.h"
+#include "src/models/fpca.h"
 
 // clang-format on
 

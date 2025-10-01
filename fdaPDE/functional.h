@@ -22,8 +22,8 @@
 // include core
 #include <fdaPDE/core.h>
 
-#include "solvers.h"
-#include "src/models/fpca.h"
+//#include "solvers.h"
+//#include "src/models/fpca.h"
 
 // clang-format on
 

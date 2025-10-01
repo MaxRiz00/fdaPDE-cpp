@@ -42,6 +42,7 @@ class SRPDE {
         for (const std::string& token : formula_.rhs()) {
             if (gf.contains(token)) { n_covs_++; }
         }
+        //std::cout << "SRPDE: n_obs = " << n_obs_ << ", n_covs = " << n_covs_ << std::endl;
         solver_ = solver_t(formula, gf, penalty.get());
     }
     template <typename... Args> auto fit(Args&&... args) { return solver_.fit(std::forward<Args>(args)...); }
@@ -50,8 +51,9 @@ class SRPDE {
     const vector_t& beta() const { return solver_.beta(); }
     const vector_t& misfit() const { return solver_.misfit(); }
     int n_covs() const { return n_covs_; }
-    int n_obs() const { return n_obs_; }
+    int n_dofs() const { return solver_.n_dofs(); }
     double edf(int r = 100, int seed = random_seed) { return solver_.edf(r, seed); }
+    int n_obs() const { return n_obs_; }
     const vector_t& response() const { return solver_.response(); }
     const matrix_t& design_matrix() const { return solver_.design_matrix(); }
     const sparse_matrix_t& weights() const { return solver_.weights(); }

@@ -14,6 +14,30 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef __FDAPDE_MODELS_MODULE_H__
-//#    error "Include fdaPDE/models.h instead of including internal headers directly."
-#endif
+#ifndef __FDAPDE_ISOSOLVERS_MODULE_H__
+#define __FDAPDE_ISOSOLVERS_MODULE_H__
+
+// clang-format off
+
+// include core
+#include <fdaPDE/core.h>
+
+#include "src/formula.h"
+#include "src/distributions.h"
+#include "src/iso_solvers/utility.h"
+
+namespace fdapde {
+
+struct ls_solver { };
+struct de_solver { };
+  
+}   // namespace fdapde
+
+// least square solvers
+#include "src/iso_solvers/iso_ls_elliptic.h"
+
+// density estimation solvers
+
+// clang-format on
+
+#endif   // __FDAPDE_ISOSOLVERS_MODULE_H__
