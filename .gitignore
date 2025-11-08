@@ -18,6 +18,8 @@ CMakeFiles/
 cmake-build-debug-docker/
 cmake-build-default/
 cmake-build-debug/
+extra/
+application/
 
 #plots
 *.pdf
