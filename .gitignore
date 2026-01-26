@@ -19,7 +19,7 @@ cmake-build-debug-docker/
 cmake-build-default/
 cmake-build-debug/
 extra/
-application/
+
 
 #plots
 *.pdf
@@ -28,6 +28,10 @@ application/
 #help files
 !*.csv
 !*.mtx
+
+application/*
+!application/thesis_application
+!application/thesis_application/**
 
 #docs files
 *.puml
